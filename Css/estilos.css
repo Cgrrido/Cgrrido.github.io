@@ -1,0 +1,497 @@
+/* Autor y fecha*/
+/*Estilos Generales*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Handlee', cursive;
+    font-size: 20px;
+    color: #3f3f3f;
+    background-color:white;
+}
+
+p {
+    padding: 10px;
+    line-height: 1.8em;
+}
+
+.boton {
+    margin: 40px;
+    color:white;
+    background-color:rgb(109, 1, 86);
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Handlee', cursive;
+}
+
+
+.purpura {   background-color:rgb(109, 1, 86);}
+.purpura:hover { background-color:palevioletred;
+}
+
+a {
+    text-decoration: none;
+    color: palevioletred; /*Para quitarle el subrayado a los enlaces*/
+}
+
+a:hover {
+    color:goldenrod;
+    }
+
+a.activo {
+    color:palevioletred;
+} 
+
+img { max-width: 100%;} /*Para que las imágenes tengan el 100% del contenedor en el que estén*/
+
+
+.separador {
+    display: none;
+    width: 60%;
+    border: 1px solid rgba(216, 112, 147, 0.863);
+    margin-bottom: -40px;
+    margin-top: -40px;
+   
+}
+
+@keyframes intermitente {
+    0% { opacity: 0;}
+    50% { opacity: 1;}
+    100% { opacity: 0;}
+}
+
+
+
+/*Cabecera con logo y barra de navegación*/
+
+header {   /*"header" es el elemento que agrupa a todo*/ /*Es conveniente poner un borde para saber como vamos trabajando border: 1px solid white; */
+    
+    position:absolute; /*Absoluta a su padre que es el body*/
+    top:0;
+    display:flex;
+    justify-content: space-between;   /*Te lleva cada cosa a un extremo*/
+    align-items: center;
+    width:100%;
+    padding:20px;
+}
+.burdeos {
+    box-shadow: 0 4px 8px grey;
+    position:initial;
+}
+
+header .burger {
+display:none;
+color:white;
+font-size: 25px;
+}
+
+.burdeos .burger {
+    color:rgba(128, 0, 0, 0.76);
+}
+
+/*Ahora queremos que "ul" deje de ser lista*/
+/*Queremos que lo elementos estén en horizontal. Como los "li" son hijos de "ul"...*/
+header nav ul {
+    list-style: none;
+    display:flex;
+}
+
+header nav ul li {
+    padding: 10px;
+}
+
+header nav ul li a {
+    color:#66cdaa;
+}
+
+.normal nav ul li a:hover {
+    color:purple;
+}
+
+.normal nav ul li a.activo {
+    color:#e08332;
+}
+
+
+/*Sección HERO*/
+
+.hero {
+    height: 100vh; /*Para que ocupe el 100%*/
+    background-image: url('../IMG/cupcakes-407189_1920 (1).jpg');   /*pixbay*/
+    background-position: center ;
+    background-size: cover ;
+    background-attachment: fixed;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items:center;
+}
+
+.hero a {
+    color:white;
+    font-size:35px;
+    margin-bottom: 40px;
+    animation-name: intermitente; /*Hay que poner el nombre de la animación*/
+    animation-duration: 1500ms; /*Tiempo que dura la animación*/
+    animation-iteration-count: infinite;  /*Para que esté ahí siempre*/
+}
+
+.hero h1 {
+    color:white;
+    font-size: 60px;
+    text-shadow: 3px 3px 3px rgba(128, 0, 0, 0.76);
+}
+
+.hero h2 {
+    color: rgba(255, 255, 255, 0.815);
+    margin-bottom: 80px;
+    text-shadow:2px 2px 2px rgba(128, 0, 0, 0.76);
+}
+
+.col1 {
+    flex-basis: initial;
+}
+
+/*Lay out (MAQUETACIÓN)*/
+
+.fila {
+    display: flex;
+    padding-top: 30px;
+    color:#6d0156;
+    align-items: center;
+    flex-wrap: wrap;  /*Cuando las cajas no quepan que salten abajo*/
+  
+}
+
+.ultima {
+    margin-bottom: 2px;
+}
+
+.col1 {
+    flex-basis: 300px; /*ancho de referencia. La mayoría de los dispositivos moviles tienen en torno a 300px*/
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.col2 {
+    flex-basis: 300px; /*ancho de referencia. La mayoría de los dispositivos moviles tienen en torno a 300px*/
+    flex-grow: 2; /*Que crezca 2 en vez de 1. Crecerá el doble que el otro*/
+    padding: 10px;
+    border: 2px solid palevioletred;
+}
+
+.col3 {
+    flex-basis: 300px; /*ancho de referencia. La mayoría de los dispositivos moviles tienen en torno a 300px*/
+    flex-grow: 3; /*Que crezca 3 en vez de 1. Crecerá el triple que el otro*/
+    padding:40px;
+}
+
+.col100 {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:palevioletred;
+    
+}
+.centrado {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piederecho {
+    display: flex;
+    align-items: flex-end;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*Sección con imagen de fondo*/
+
+.fondo {
+    padding: 60px 40px;
+    background-image: url('../IMG/milkshake.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.slogan {
+    font-size: 40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.705);
+ 
+}
+
+/* Formulario newsletter*/
+
+.input_newsletter {
+    color: rgb(109, 1, 86);
+    font-size: 20px;
+    padding: 10px;
+    border: solid 2px;
+    border-radius: 10px;
+    margin:15px 20px;
+}
+
+.boton_newsletter {
+    margin: 20px;
+    color:white;
+    background-color:rgb(109, 1, 86);
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Handlee', cursive;
+    margin:15px 20px;
+}
+
+.boton_newsletter:hover {
+    background-color:palevioletred;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color:palevioletred;
+}
+
+.boton_newsletter:focus, .input_newsletter:focus {
+    outline: none;
+}
+
+
+
+.newsletter {
+   
+ font-size: 32px;
+ color:#e08332;
+ text-align: center;
+}
+
+/* Footer */
+
+footer {
+background-color: #fff; 
+background-image: 
+linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+linear-gradient(#eee .1em, transparent .1em);
+background-size: 100% 1.2em;
+color:palevioletred;
+display: flex;
+flex-wrap: wrap;
+font-size:18px;
+position: relative;
+
+}
+
+.top {
+    font-size: 50px;
+    position: absolute; /*Para que funcione el padre tiene que estar "relative"(posicionado)*/
+    top:-40px;
+    right: 50%;
+    transform: translateX(50%);   /*Para adaptar el botón y poder moverlo. Tiene que ir acorde a "right"*/
+    height: 60px;
+    width: 60px;
+    background-color:rgba(216, 112, 147, 0.582);
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30px;
+}
+
+
+.izquierda {
+    border: 1px solid white;
+}
+
+/* .izquierda p {
+    padding: 5px;
+} */
+
+.centro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+     
+
+footer a {
+    color:rgb(109, 1, 86);
+    
+}
+
+footer a:hover {
+    color:rgb(224, 131, 50);
+    
+}
+
+.derecha {
+     display: flex;
+     justify-content:space-between;    /*Para poner todos los iconos juntos y centrados en forma de fila*/
+     align-items: center;
+     flex-direction: column;
+}
+
+.derecha a {
+    font-size: 30px;
+    color:rgb(224, 131, 50);
+    margin: 10px;
+}
+
+.legales a {
+    font-size:14px;
+}
+
+.minifooter p {
+    font-size: 14px;
+    padding: 5px;
+}
+.t1 {
+padding: 15px;
+color:#4db693;
+
+}
+.t2{
+padding: 15px;
+color:#4db693;
+}
+.t3{
+padding: 15px;
+color:#4db693;
+}
+
+.top {
+    font-size: 50px;
+    position: absolute;
+    top:-25px;
+    right: 50%;
+}
+
+
+/*Estilos de CONTACTO*/
+
+
+h1 {
+    font-size: 34px;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    padding: 10px
+}
+
+.direccion {
+    line-height: 1.9em;
+}
+
+ul {
+    padding-left: 60px;
+}
+
+li {
+    padding: 10px;
+    line-height: 1.4em;
+}
+
+/*MEDIA QUERIE*/
+
+/*Punto de ruptura para tablet/portatiles : 800*/
+/*LAS MEDIA QUERIE TIENEN QUE ESTAR SIEMPRE DE MAYOR A MENOR*/
+
+@media (max-width:920px)
+{
+    .izquierda, .centro, .derecha {
+        flex-basis: 200px;
+    }
+}
+
+@media (max-width: 800px)  /*Todo lo que sea menor a 800 y que pongamos aquí se cumplirá*/
+{ nav {
+    display:none;
+    }
+
+    header .burger {
+        display:initial;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+    .hero h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .boton {
+        margin: 40px;
+        color:white;
+        background-color:#6d0156;
+        font-size: 18px;
+        padding: 15px;
+        border-radius: 10px;
+        font-family: 'Handlee', cursive; }
+
+    .newsletter {
+        font-size: 24px;
+    }
+    .boton_newsletter {
+        font-size: 18px;
+        padding: 12px;
+        border-radius: 10px;
+    }
+    .input_newsletter {
+        font-size: 18px;
+        padding: 12px;
+        border-radius: 10px;
+    
+    }
+}
+
+@media (max-width: 640px) {
+    .fila {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col100 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .separador {
+        display: initial;
+
+    }
+    .slogan {
+        font-size:30px;
+    } 
+    }
+
+@media (max-width: 420px){
+    body{
+        font-size: 18px;
+    }
+    
+    .fila {
+        padding: 20px, 10px;
+    }
+    .col3 {padding: 10px;}
+}
+
