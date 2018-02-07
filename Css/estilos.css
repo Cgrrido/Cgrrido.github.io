@@ -125,7 +125,7 @@ header nav ul li a {
     background-image: url('../IMG/cupcakes-407189_1920 (1).jpg');   /*pixbay*/
     background-position: center ;
     background-size: cover ;
-    background-attachment: fixed;
+    /* background-attachment: fixed; --> Para evitar problemas en los moviles retina*/
     display:flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -414,6 +414,14 @@ li {
 
 /*Punto de ruptura para tablet/portatiles : 800*/
 /*LAS MEDIA QUERIE TIENEN QUE ESTAR SIEMPRE DE MAYOR A MENOR*/
+
+@media (min-width:1440px) {
+    .hero {
+        background-attachment: fixed;   /*Para conservar el efecto parallax solo funcionara en dispositivo  de más de 1440*/
+    }
+}
+
+
 
 @media (max-width:920px)
 {
