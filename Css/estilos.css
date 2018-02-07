@@ -179,10 +179,11 @@ header nav ul li a {
 }
 
 .col2 {
-    flex-basis: 300px; /*ancho de referencia. La mayoría de los dispositivos moviles tienen en torno a 300px*/
+    flex-basis: 300px; /*ancho de referenci La mayoría de los dispositivos moviles tienen en torno a 300px*/
     flex-grow: 2; /*Que crezca 2 en vez de 1. Crecerá el doble que el otro*/
     padding: 10px;
     border: 2px solid palevioletred;
+
 }
 
 .col3 {
@@ -309,7 +310,7 @@ position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -30px;
+    margin-top: -5px;
 }
 
 
